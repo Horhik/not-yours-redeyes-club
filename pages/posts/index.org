@@ -1,5 +1,11 @@
 #+TITLE: Blog Index
 
+- *[[file:10-moons-child-kwakiutl-ritual_ru.org][Имя дитя десяти лун от роду]]*
+  #+html: <p class='pubdate'>by Horhik on Dec 01, 2023.</p>
+- *[[file:hitchiking-stories.org][Hitchhiking stories]]*
+  #+html: <p class='pubdate'>by Horhik on Aug 15, 2023.</p>
+- *[[file:kuryokhin-debijev-script.org][Сценарий к кинофильму "Огненный Фаллос Коммунизма"]]*
+  #+html: <p class='pubdate'>by nil on Jun 26, 2023.</p>
 - *[[file:mandelbrot-set-challenge-1.ru.org][Множество мандельброта]]*
   #+html: <p class='pubdate'>by Horhik on Apr 23, 2023.</p>
 - *[[file:mandelbrot-set-challenge-1.org][Challenge 1. Mandelbrot set]]*

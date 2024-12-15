@@ -5,7 +5,7 @@
 #+options: timestamp:t title:t toc:t todo:t |:t
 #+title: My improvisations
 #+date: <2023-06-02 Fri>
-#+author:
+#+author: Horhik
 #+email: horhik@disroot.org
 #+language: en
 #+select_tags: export
@@ -18,39 +18,64 @@
 
 ** Test of my new LMZ (ЛМЗ - Ленинградский Модульный Звук) synths
 
-- [[https://und.ooo/music/music/lmz-test.mp3][*LMZ-test.mp3*]]
+- [[https://und.ooo/media/music/lmz-test.mp3][*LMZ-test.mp3*]]
 
 #+BEGIN_export html
 <audio controls>
-<source src="https://und.ooo/music/music/lmz-test.mp3" type="audio/mp3">
+<source src="https://und.ooo/media/music/lmz-test.mp3" type="audio/mp3">
+<source src="https://und.ooo/backup/music/lmz-test.mp3" type="audio/mp3">
 </audio>
 #+END_export
 
 ** Some experiments with PureData
 
-- [[https://und.ooo/music/music/random_sin.mp3][*Random Sin.mp3*]]
+- [[https://und.ooo/media/music/random_sin.mp3][*Random Sin.mp3*]]
 
 #+BEGIN_export html
 <audio controls>
-<source src="https://und.ooo/music/music/random_sin.mp3" type="audio/mp3">
+<source src="https://und.ooo/media/music/random_sin.mp3" type="audio/mp3">
 </audio>
 #+END_export
 
 ** Just random Improvisations
 
-- [[https://und.ooo/music/music/svistulki.mp3][*Svistulki.mp3*]]
+- [[https://und.ooo/media/music/svistulki.mp3][*Svistulki.mp3*]]
 
 #+BEGIN_export html
 <audio controls>
-<source src="https://und.ooo/music/music/svistulki.mp3" type="audio/mp3">
+<source src="https://und.ooo/media/music/svistulki.mp3" type="audio/mp3">
+<source src="https://und.ooo/backup/music/svistulki.mp3" type="audio/mp3">
 </audio>
 #+END_export
 
-- [[https://und.ooo/music/music/uiuiuiuiuiui.mp3][*Uuiuiuiuiuiui.mp3*]]
+- [[https://und.ooo/media/music/uiuiuiuiuiui.mp3][*Uuiuiuiuiuiui.mp3*]]
 
 #+BEGIN_export html
 <audio controls>
-<source src="https://und.ooo/music/music/uiuiuiuiuiui.mp3" type="audio/mp3">
+<source src="https://und.ooo/media/music/uiuiuiuiuiui.mp3" type="audio/mp3">
+<source src="https://und.ooo/backup/music/uiuiuiuiuiui.mp3" type="audio/mp3">
+</audio>
+
+#+END_export
+
+- [[https://und.ooo/media/music/sorry_I_did_techno.mp3][*Sorry I did techno.mp3*]]
+
+#+BEGIN_export html
+<audio controls>
+<source src="https://und.ooo/media/music/sorry_I_did_techno.mp3" type="audio/mp3">
+<source src="https://und.ooo/backup/music/sorry_I_did_techno.mp3" type="audio/mp3">
+</audio>
+
+#+END_export
+
+** Experiments with handmade instruments
+
+- [[https://und.ooo/media/music/self-soilded-jack-filthy-square-wave-from-arduino-compressed.mp3][Filthy arduino's square wave connected with weird wired got electribed.mp3]]
+
+#+BEGIN_export html
+<audio controls>
+<source src="https://und.ooo/media/music/self-soilded-jack-filthy-square-wave-from-arduino-compressed.mp3" type="audio/mp3">
+<source src="https://und.ooo/bacup/music/self-soilded-jack-filthy-square-wave-from-arduino-compressed.mp3" type="audio/mp3">
 </audio>
 
 #+END_export

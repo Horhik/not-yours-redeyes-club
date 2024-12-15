@@ -1,0 +1,62 @@
+#+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+options: author:t broken-links:nil c:nil creator:nil
+#+options: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:t
+#+options: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+options: timestamp:t title:t toc:t todo:t |:t
+#+title: Field Recordings
+#+date: <2023-06-29 Thu>
+#+author: Horhik
+#+email: horhik@disroot.org
+#+language: en
+#+select_tags: export
+#+exclude_tags: noexport
+#+creator: Emacs 28.2 (Org mode 9.6)
+#+cite_export:
+
+#+OPTIONS: num:nil
+
+
+Here's the list of my recordings made on Zoom H1n
+
+** Pure field recordings
+
+- [[https://und.ooo/media/music/lubyanka.mp3][*lubyanka.mp3*]]
+- [[https://und.ooo/media/music/lubyanka.wav][*lubyanka.wav (High Quality)*]]
+
+#+BEGIN_export html
+<audio controls>
+<source src="https://und.ooo/media/music/lubyanka.mp3" type="audio/mp3">
+<source src="https://und.ooo/media/music/lubyanka.wav" type="audio/wav">
+</audio>
+#+END_export
+
+
+- [[https://und.ooo/media/music/tea0.mp3][*tea0.mp3*]]
+- [[https://und.ooo/media/music/tea0.wav][*tea0.wav (High Quality)*]]
+
+#+BEGIN_export html
+<audio controls>
+<source src="https://und.ooo/media/music/tea0.mp3" type="audio/mp3">
+<source src="https://und.ooo/media/music/tea0.wav" type="audio/wav">
+</audio>
+#+END_export
+
+- [[https://und.ooo/media/music/tea0.mp3][*tea0.mp3*]]
+- [[https://und.ooo/media/music/tea0.wav][*tea0.wav (High Quality)*]]
+
+#+BEGIN_export html
+<audio controls>
+<source src="https://und.ooo/media/music/tea0.mp3" type="audio/mp3">
+<source src="https://und.ooo/media/music/tea0.wav" type="audio/wav">
+</audio>
+#+END_export
+
+
+- [[https://und.ooo/media/music/sound-of-road-signs-in-the-rain.wav][*sound-of-road-signs-in-the-rain.wav*]]
+
+#+BEGIN_export html
+<audio controls>
+<source src="https://und.ooo/media/music/sound-of-road-signs-in-the-rain.wav" type="audio/wav">
+</audio>
+#+END_export
+

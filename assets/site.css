@@ -213,6 +213,9 @@ a:active{
     background: var(--background-main);
     line-height: 2em;
     border-radius: 10px;
+    width: 60vw;
+    margin: auto;
+
 		
 }
 
