@@ -1,0 +1,65 @@
+#+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+options: author:t broken-links:nil c:nil creator:nil
+#+options: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:t
+#+options: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+options: timestamp:t title:t toc:t todo:t |:t
+#+title: Holechat
+#+date: <2023-04-13 Thu>
+#+author: Horhik
+#+email: horhik@teapod
+#+language: en
+#+select_tags: export
+#+exclude_tags: noexport
+#+creator: Emacs 28.2 (Org mode 9.6)
+* Holechat
+My chat.
+* README
+** Hole chat 🐇
+:PROPERTIES:
+:CUSTOM_ID: hole-chat
+:END:
+A decentralized chat over [[https://freenetproject.org][Freenet]].
+
+
+*** Requirements❗❗❗
+:PROPERTIES:
+:CUSTOM_ID: requirements
+:END:
+[[https://freenetproject.org][Freenet]] running
+
+** Installing 🚀
+:PROPERTIES:
+:CUSTOM_ID: installing
+:END:
+1. Clone [[https://github.com/hole-chat/core][this]] repo
+
+2. Launch core (=cargo run=)
+
+3. 
+   ** Install and launch client (for example [[https://github.com/hole-chat/rabbit-hole][rabbit-hole]])
+   :PROPERTIES:
+   :CUSTOM_ID: install-and-launch-client-for-example-rabbit-hole
+   :END:
+   ** About frontend clients 🖌️
+   :PROPERTIES:
+   :CUSTOM_ID: about-frontend-clients
+   :END:
+   The purpose of "hole project" is to write independend frontend
+   clients for each platform, because, *app cannot be good for one
+   particular platform if it's multiplatform.* As a hole-core is just a
+   logic part, which should be multiplatform, *frontend shouldn't*, And
+   I encourage you to help and write "rabbit-hole for android" or
+   "rabbit-hole-gtk", etc...
+
+--------------
+
+** TODO ☑️
+:PROPERTIES:
+:CUSTOM_ID: todo
+:END:
+- [X] Basic sending and receiving messages 💌
+- [ ] Add RSA or NTRU encryption 🔐
+- [ ] Write tests 🧪
+- [ ] Make more vebose documentation 📚
+- [ ] Create a hole-daemon 🖥
+

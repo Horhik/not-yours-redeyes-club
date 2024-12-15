@@ -1,0 +1,89 @@
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="/static/site.css">
+
+<header>
+  <div class="head-right">
+  <ul>
+    <li>
+      <a href='../posts/index.html'>
+	POSTS 📜</a>
+    </li>
+    <li>
+      <a href='../portfolio/index.html'>
+	PORTFOLIO 📓   </a>
+    </li>
+    <li>
+      <a href='../about/index.html'>
+	ABOUT 🫠</a>
+    </li>
+    <li>
+      <a href='../donate/index.html'>
+	DONATE 💸</a>
+    </li>
+    <li>
+      <a href='../music/index.html'>
+	MUSIC 🎶</a>
+    </li>
+  </ul>
+  </div>
+  <div class="head-right">
+    <a href="../index.html">Home</a>
+    <button id="theme-button"> undefined LOL!! 😜 </button>
+   </div>
+</header>
+
+ <script>
+
+
+// get the cookie value
+const cookies = document.cookie.split(';').map(cookie => cookie.trim());
+const themeCookie = cookies.find(cookie => cookie.startsWith('theme='));
+const themeValue = themeCookie ? themeCookie.split('=')[1] : null;
+
+// use the theme value to set the current theme
+
+const root = document.documentElement;
+const themeButton = document.getElementById('theme-button');
+function setLight () {
+    root.style.setProperty('--lightness', '93%')
+    themeButton.textContent = '😎';
+    //localStorage.setItem("theme", "light");
+    document.cookie = `theme=light; expires=${new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toUTCString()}; path=/`;
+    console.log("changing theme to LIGHT")
+}
+function setDark () {
+    root.style.setProperty('--lightness', '10%');
+    themeButton.textContent = '🌚';
+    //localStorage.setItem("theme", "dark");
+    document.cookie = `theme=dark; expires=${new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toUTCString()}; path=/`;
+    console.log("changing theme to DARK")
+}
+
+const savedTheme = localStorage.getItem("theme");
+console.log("current theme are: ", savedTheme);
+
+if (themeValue == "dark") {
+    setDark();
+}
+else if (themeValue == "light"){
+    setLight();
+}
+
+
+
+
+themeButton.addEventListener('click', () => {
+    const cookies = document.cookie.split(';').map(cookie => cookie.trim());
+    const themeCookie = cookies.find(cookie => cookie.startsWith('theme='));
+    const themeValue = themeCookie ? themeCookie.split('=')[1] : null;
+    console.log(themeValue);
+
+    if (themeValue == "light") {
+	setDark();
+    }
+    else {
+	setLight(); 
+    }
+
+});
+ </script>

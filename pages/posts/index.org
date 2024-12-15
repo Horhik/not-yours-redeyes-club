@@ -1,0 +1,14 @@
+#+TITLE: Blog Index
+
+- *[[file:mandelbrot-set-challenge-1.ru.org][Множество мандельброта]]*
+  #+html: <p class='pubdate'>by Horhik on Apr 23, 2023.</p>
+- *[[file:mandelbrot-set-challenge-1.org][Challenge 1. Mandelbrot set]]*
+  #+html: <p class='pubdate'>by Horhik on Apr 23, 2023.</p>
+- *[[file:starting-programming-challenges.org][Starting programming challenges [[file:./startig-programming-challenges.ru.org][ru]]-[[file:./starting-programming-challenges.org][en]]]]*
+  #+html: <p class='pubdate'>by Horhik on Apr 23, 2023.</p>
+- *[[file:startig-programming-challenges.ru.org][Programming challenges. Начало]]*
+  #+html: <p class='pubdate'>by Horhik on Apr 23, 2023.</p>
+- *[[file:emacs-blog.org][Creating blog with emacs]]*
+  #+html: <p class='pubdate'>by nil on Apr 17, 2023.</p>
+- *[[file:my-emacs-config.org][Emacs config.]]*
+  #+html: <p class='pubdate'>by Horhik on Apr 14, 2023.</p>

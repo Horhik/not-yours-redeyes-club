@@ -1,0 +1,205 @@
+#+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+options: author:t broken-links:nil c:nil creator:nil
+#+options: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:t
+#+options: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+options: timestamp:t title:t toc:t todo:t |:t
+#+date: <2023-04-14 Fri>
+#+author: Horhik
+#+email: horhik@disroot.org
+#+language: en
+#+select_tags: export
+#+exclude_tags: noexport
+#+creator: Emacs 28.2 (Org mode 9.6)
+#+cite_export:
+
+#+SETUPFILE: ~/Blog/assets/templates/main.org
+#+title: Emacs config.
+#+author Horhik
+#+BABEL: :cache no
+#+PROPERTY: header-args:emacs-lisp :tangle init.el
+
+Here's part of my config for ~org-publish~
+* Orb Publish
+** Setting up variables
+#+begin_src emacs-lisp
+  (setq blog-path "~/Space/Code/Blog/")
+  (setq blog-static-path "~/Space/Code/Blog/html/")
+  (setq blog-content-path "~/Space/Code/Blog/pages/")
+  (setq blog-templates "~/Space/Code/Blog/assets/templates/")
+#+end_src
+** Custom sections
+#+begin_src emacs-lisp
+  (defvar this-date-format "%b %d, %Y")
+  (defun blog/html-postamble (plist)
+      "PLIST."
+      (concat (format
+               (with-temp-buffer
+                 (insert-file-contents (concat blog-templates "postamble.html")) (buffer-string))
+               (format-time-string this-date-format (plist-get plist :time)) (plist-get plist :creator))))
+
+    (defun blog/html-preamble (plist)
+    "PLIST: An entry."
+    (if (org-export-get-date plist this-date-format)
+        (plist-put plist
+                   :subtitle (format "Published on %s by %s."
+                                     (org-export-get-date plist this-date-format)
+                                     (car (plist-get plist :author)))))
+    ;; Preamble
+    (with-temp-buffer
+      (insert-file-contents (concat blog-templates "preamble.html")) (buffer-string)))
+
+  (defun blog/html-index-preamble (plist)
+    "PLIST: An entry."
+    (if (org-export-get-date plist this-date-format)
+        (plist-put plist
+                   :subtitle (format "Published on %s by %s."
+                                     (org-export-get-date plist this-date-format)
+                                     (car (plist-get plist :author)))))
+    ;; Preamble
+    (with-temp-buffer
+      (insert-file-contents (concat blog-templates "index-preamble.html")) (buffer-string)))
+
+#+end_src
+** Sitemap
+#+begin_src emacs-lisp
+  (defun me/org-sitemap-format-entry (entry style project)
+    "Format posts with author and published data in the index page.
+
+ENTRY: file-name
+STYLE:
+PROJECT: `posts in this case."
+    (cond ((not (directory-name-p entry))
+           (format "*[[file:%s][%s]]*
+                 #+HTML: <p class='pubdate'>by %s on %s.</p>"
+                   entry
+                   (org-publish-find-title entry project)
+                   (car (org-publish-find-property entry :author project))
+                   (format-time-string this-date-format
+                                       (org-publish-find-date entry project))))
+          ((eq style 'tree) (file-name-nondirectory (directory-file-name entry)))
+          (t entry)))
+#+end_src
+** Preambles and postambles
+#+begin_center emacs-lisp
+(setq index-preamble "<section>
+                 <div> <h3> Segmentation Fail. Horhik's blog </h3></div>
+      <div><ul>
+        <li><a href='./posts/index.html'>Posts</a></li>
+        <li><a href='./portfolio/index.html'>Portfolio</a></li>
+        <li><a href='./about/index.html'>About</a></li>
+        <li><a href='./donate/index.html'>Donate</a></li>
+        <li><a href='./projects/index.html'>Projects</a></li>
+       </ul></div>
+                </section>")
+(setq inner-preamble "<header>
+                 <div> <h3> <a href='../index.html'>Horhik's blog </a></h3></div>
+      <div><ul>
+        <li><a href='../posts/index.html'>Posts</a></li>
+        <li><a href='../portfolio/index.html'>Portfolio</a></li>
+        <li><a href='../about/index.html'>About</a></li>
+        <li><a href='../donate/index.html'>Donate</a></li>
+        <li><a href='../projects/index.html'>Projects</a></li>
+       </ul></div>
+                </header>")
+
+(setq site-postamble "<footer><p>
+               <b> This site is made by Horhik and all contens are under CC I forgot full license name </b>
+             </p></footer>")
+(setq org-html-preamble-format `(("en", inner-preamble)))    
+(setq org-html-postamble-format `(("en", site-postamble)))                
+#+end_center
+** list
+#+begin_src emacs-lisp
+    (require 'ox-publish)
+
+
+    (setq org-publish-project-alist
+          `(
+            ("blogposts"
+             :base-directory ,(concat blog-content-path "posts")
+             :base-extension "org"
+             :publishing-directory ,(concat blog-static-path "posts")
+             :publishing-function org-html-publish-to-html
+             :recursive t
+             :headline-levels 8             
+             :html-preamble blog/html-preamble
+             :html-postamble blog/html-postamble
+             :auto-sitemap t
+             :sitemap-filename "index.org"
+             :sitemap-title "Blog Index"         
+             :sitemap-format-entry me/org-sitemap-format-entry
+             :sitemap-style list
+             :with-tags t
+             :with-toc t
+             :section-numbers: nil
+             :table-of-contents t
+             :html-head-include-default-style nil
+             )
+            ("portfolio"
+             :base-directory ,(concat blog-content-path  "portfolio")
+             :base-extension "org"
+             :publishing-directory ,(concat blog-static-path  "portfolio")
+             :publishing-function org-html-publish-to-html
+             :headline-levels 8             
+             :html-preamble blog/html-preamble
+             :html-postamble blog/html-postamble
+             :auto-sitemap: t
+             :sitemap-filename: "index.org"
+             :sitemap-title: "Portfolio"
+             :sitemap-format-entry me/org-sitemap-format-entry
+             :sitemap-style list
+             :validation-link nil
+             :table-of-contents nil
+             :html-head-include-default-style nil
+             )
+            ("about"
+             :base-directory ,(concat blog-content-path  "about")
+             :base-extension "org"
+             :publishing-directory ,(concat blog-static-path  "about")
+             :publishing-function org-html-publish-to-html
+             :recursive t
+             :headline-levels 8             
+             :html-preamble blog/html-preamble
+             :html-postamble blog/html-postamble
+             :validation-link nil
+             :table-of-contents nil
+             :html-head-include-default-style nil
+             )
+  ("donate"
+             :base-directory ,(concat blog-content-path  "donate")
+             :base-extension "org"
+             :publishing-directory ,(concat blog-static-path  "donate")
+             :publishing-function org-html-publish-to-html
+             :recursive t
+             :headline-levels 8             
+             :html-preamble blog/html-preamble
+             :html-postamble blog/html-postamble
+             :validation-link nil
+             :table-of-contents nil
+             :html-head-include-default-style nil
+             )
+            ("blogstatic"
+             :base-directory "~/Blog/pages/"
+             :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+             :publishing-directory "/home/horhik/Code/Blog/html/"
+             :recursive t
+             :publishing-function org-publish-attachment
+             )
+              ("index"
+               :base-directory ,(concat blog-content-path "")
+               :base-extension "org"
+               :publishing-directory ,(concat blog-static-path "")
+               :publishing-function org-html-publish-to-html
+               :site-toc nil
+               :table-of-contents: nil
+               :auto-sitemap: t
+               :sitemap-format-entry me/org-sitemap-format-entry
+               :sitemap-style list
+               :headline-levels 8             
+               :html-preamble blog/html-index-preamble
+               :html-postamble blog/html-postamble
+               )
+            ("Blog" :components ("blogposts" "blogstatic"  "portfolio" "about"  "index" "donate"))
+            )
+          )
+#+end_src

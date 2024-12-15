@@ -1,0 +1,4 @@
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../assets/site.css" />
+
+#+HTML_HEAD: <header> <ul> <li><a href='./posts/index.html'>Posts 📜</a></li> <li><a href='./portfolio/index.html'>Portfolio 📓   </a></li> <li><a href='./about/index.html'>About 🫠</a></li> <li><a href='./donate/index.html'>Donate 💸</a></li> <li><a href='./projects/index.html'>Projects 📦</a></li> </ul> </header>
+

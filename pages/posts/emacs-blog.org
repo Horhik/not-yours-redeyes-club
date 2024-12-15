@@ -1,0 +1,5 @@
+#+TITLE: Creating blog with emacs
+  * References
+Sites:
+- https://zwpdbh.github.io/emacs/org-to-blog-using-org-publish.html
+- https://orgmode.org/worg/org-tutorials/org-publish-html-tutorial.html

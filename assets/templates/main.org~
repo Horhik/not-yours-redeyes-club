@@ -1,0 +1,24 @@
+
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../assets/site.css" />
+#+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+options: author:t broken-links:nil c:nil creator:nil
+#+options: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:t
+#+options: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+options: timestamp:t title:t toc:t todo:t |:t
+#+language: en
+#+select_tags: export
+#+exclude_tags: noexport
+#+creator: Emacs 28.2 (Org mode 9.6)
+#+FILETAGS: :blogpost:
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../../assets/site.css" />
+
+#+HTML_HEAD:  <header>
+ #+HTML_HEAD:<ul>
+ #+HTML_HEAD:<li><a href='../posts/index.html'>Posts 📜</a></li>
+#+HTML_HEAD:<li><a href='../portfolio/index.html'>Portfolio 📓   </a> </li>
+#+HTML_HEAD:<li><a href='../about/index.html'>About 🫠</a> </li>
+#+HTML_HEAD:<li><a href='../donate/index.html'>Donate 💸</a></li>
+#+HTML_HEAD:<li><a href='../projects/index.html'>Projects 📦</a></li>
+#+HTML_HEAD:<li><a href='../projects/index.html'>Music 🎶</a></li>
+#+HTML_HEAD:</ul> </header>
+

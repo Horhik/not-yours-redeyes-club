@@ -1,0 +1,316 @@
+@font-face {
+    font-family: 'mononoki';
+    src: local('mononoki BoldItalic'), local('mononoki-BoldItalic'),
+        url('/static/fonts/mononoki-BoldItalic.woff2') format('woff2'),
+        url('/static/fonts/mononoki-BoldItalic.woff') format('woff'),
+        url('/static/fonts/mononoki-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'mononoki';
+    src: local('mononoki Italic'), local('mononoki-Italic'),
+        url('/static/fonts/mononoki-Italic.woff2') format('woff2'),
+        url('/static/fonts/mononoki-Italic.woff') format('woff'),
+        url('/static/fonts/mononoki-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'mononoki';
+    src: local('mononoki Bold'), local('mononoki-Bold'),
+        url('/static/fonts/mononoki-Bold.woff2') format('woff2'),
+        url('/static/fonts/mononoki-Bold.woff') format('woff'),
+        url('/static/fonts/mononoki-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'mononoki';
+    src: local('mononoki Regular'), local('mononoki-Regular'),
+        url('/static/fonts/mononoki-Regular.woff2') format('woff2'),
+        url('/static/fonts/mononoki-Regular.woff') format('woff'),
+        url('/static/fonts/mononoki-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'mononoki';
+    src: local('mononoki Regular'), local('mononoki-Regular'),
+        url('/static/fonts/mononoki-Regular_1.woff2') format('woff2'),
+        url('/static/fonts/mononoki-Regular_1.woff') format('woff'),
+        url('/static/fonts/mononoki-Regular_1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'mononoki';
+    src: local('mononoki BoldItalic'), local('mononoki-BoldItalic'),
+        url('/static/fonts/mononoki-BoldItalic_1.woff2') format('woff2'),
+        url('/static/fonts/mononoki-BoldItalic_1.woff') format('woff'),
+        url('/static/fonts/mononoki-BoldItalic_1.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'mononoki';
+    src: local('mononoki Bold'), local('mononoki-Bold'),
+        url('/static/fonts/mononoki-Bold_1.woff2') format('woff2'),
+        url('/static/fonts/mononoki-Bold_1.woff') format('woff'),
+        url('/static/fonts/mononoki-Bold_1.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'mononoki';
+    src: local('mononoki Italic'), local('mononoki-Italic'),
+        url('/static/fonts/mononoki-Italic_1.woff2') format('woff2'),
+        url('/static/fonts/mononoki-Italic_1.woff') format('woff'),
+        url('/static/fonts/mononoki-Italic_1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+:root{
+    --hue-main: 235;
+    --hue-shift: 98;
+    --lightness: 93%;
+    --font-color: hsl(var(--hue-main), 5%, calc(100% - var(--lightness)));
+    --background-main: hsl(var(--hue-main), 5%, var(--lightness));
+    --background-second: hsl(var(--hue-main), 14%, calc(5% + var(--lightness)));
+    --background-shadow: hsl(var(--hue-main), 30%, calc(70% - var(--lightness)));
+    --link-color: hsl(var(--hue-main), 15%, calc(100%-var(--lightness)));
+    --hover-color: hsl(calc(var(--hue-main) ), 55%, 59%);
+    --visited-color: hsl(calc(var(--hue-main) + var(--hue-shift)), 40%, 45%);
+    --inverted-color: hsl(var(--hue-main), 50%, var(--lightness));
+    --main-font: 'mononoki', monospace, sans-serif;
+    --second-font:  "mononoki", monospace, sans-serif;
+
+}
+html{
+    background: var(--background-second);
+    color: var(--font-color);
+}
+body {
+    font-family: var(--main-font), sans;
+    margin: 0 auto;
+    background-color: var(--background-second);
+    padding: 20px 24px;
+}
+
+header {
+    margin: 0 auto;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+}
+
+*content{
+    width: 80vw;
+}
+
+.content {
+    width: 100%;
+    margin: 0 auto;
+}
+ul{
+    list-style: upper-roman;
+}
+
+header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    font-size: 1em;
+}
+
+header li {
+    list-style: none;
+    padding: 10px;
+}
+
+header a{
+    font-weight: bold;4
+    font-size: 1.3em;
+    color: var(--link-color);
+}
+
+a {
+    color: var(--link-color);
+    font-family: var(--second-font);
+    text-decoration: underline;
+    text-decoration-color: currentcolor;
+    text-decoration-thickness: auto;
+    text-decoration-thickness: 2px;
+    text-decoration-line: underline;
+    text-decoration-color: var(--link-color);
+    transition:0.2s;
+
+}
+
+li a{
+    font-family: var(--second-font);
+    font-size: 1.2em;
+    transition: 0.2s;
+    
+}
+
+code{
+    background: var(--background-main);
+    padding: 7px 10px;
+    line-height: 2em;
+    border-radius: 10px;
+}
+
+ .src, .org-src{
+
+    background: var(--background-main);
+    border-radius: 10px;
+    padding: 15px;
+    font-family: var(--second-font);
+    line-height: 1.7em;
+    overflow: scroll;
+}
+
+a {
+
+    text-decoration-color: var(--visited-color);
+}
+
+a:hover, a:focus {
+    text-decoration-color: var(--hover-color);
+    text-decoration-thickness: 7px;
+    
+}
+
+a:active{
+    background: var(--hover-color);
+    color: var(--background-main);
+}
+
+
+.footer {
+    padding: 20px;
+    background: var(--background-main);
+    line-height: 2em;
+    border-radius: 10px;
+		
+}
+
+
+.title{
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.7em;
+    font-weight: bold;
+    font-family: var(--second-font);
+}
+
+.subtitle{
+    font-size: 0.6em;
+    opacity: 0.4;
+}
+
+#table-of-contents ul{
+    list-style: none;
+    margin: 0;
+    padding: 6px 14px;
+}
+
+
+#theme-button{
+    background-color: --background-main: hsl(var(--hue-main), 5%, calc(100%  -var(--lightness)));
+    margin: 10px;
+    border-width: 5px;
+}
+#theme-button:hover{
+    filter:invert(1);
+    color: red;
+}
+
+
+
+.figure, .figure p{
+    display: flex;
+    justify-content: center;
+}
+
+
+img {
+    width: 100%;
+}
+
+
+.content {
+    width: 100%;
+}
+
+@media (min-width: 900px) { 
+
+
+#table-of-contents{
+  font-size: 1em;
+  position: fixed;
+  z-index: 1000000;
+  background: var(--background-main); 
+  right: 40px;
+  bottom: -540px;
+  text-align: center;
+  -webkit-box-shadow: 0px 20px 46px var(--background-shadow);
+  -moz-box-shadow: 0px 20px 46px var(--background-shadow);
+  border-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  height: 600px;
+  overflow: auto;
+  padding: 0px;
+  line-height: 1.7em;
+  transition:0.2s;
+  width: 500px;
+
+}
+
+#table-of-contents:hover {
+
+  bottom: 0%;
+  transform: rotate(0deg);
+}
+
+#table-of-contents li, #table-of-contents ul{
+    
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+img {
+    width: 80%;
+}
+
+.content {
+    width: 60vw;
+}
+
+}
+

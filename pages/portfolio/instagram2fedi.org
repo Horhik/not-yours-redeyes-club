@@ -1,0 +1,25 @@
+#+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+options: author:t broken-links:nil c:nil creator:nil
+#+options: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:t
+#+options: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+options: timestamp:t title:t toc:t todo:t |:t
+#+title: Instagram2Fedi
+#+date: <2023-04-21 Fri>
+#+author: Horhik
+#+email: horhik@disroot.org
+#+language: en
+#+select_tags: export
+#+exclude_tags: noexport
+#+creator: Emacs 28.2 (Org mode 9.6)
+#+cite_export:
+
+#+begin_quote
+ Python script for crossposting from Instagram to Mastodon or Pixelfed 
+#+end_quote
+
+See [[https://github.com/Horhik/Instagram2Fedi/blob/main/README.md][README.md]]
+
+
+#+DOWNLOADED: https://github.com/Horhik/Instagram2Fedi/blob/main/img.png?raw=true @ 2023-04-21 21:43:32
+[[file:2023-04-21_21-43-32_img.png.png]]
+

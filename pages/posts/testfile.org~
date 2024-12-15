@@ -1,0 +1,162 @@
+#+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+options: author:t broken-links:nil c:nil creator:nil
+#+options: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:t
+#+options: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+options: timestamp:t title:t toc:t todo:t |:t
+#+title: Сопряженный оператор
+#+date: <2023-04-13 Thu>
+#+author:
+#+email: horhik@teapod
+#+language: en
+#+select_tags: export
+#+exclude_tags: noexport
+#+creator: Emacs 28.2 (Org mode 9.6)
+#+cite_export:
+#+OPTIONS: html-postamble:auto html-preamble:t tex:t
+#+CREATOR: <a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.3.50.3 (<a href="https://orgmode.org">Org</a> mode 8.0.3)
+#+HTML_CONTAINER: div
+#+HTML_DOCTYPE: xhtml-strict
+#+HTML_HEAD:
+#+HTML_HEAD_EXTRA:
+#+HTML_HTML5_FANCY:
+#+HTML_INCLUDE_SCRIPTS:
+#+HTML_INCLUDE_STYLE:
+#+HTML_LINK_HOME:
+#+HTML_LINK_UP:
+#+HTML_MATHJAX:
+#+INFOJS_OPT:
+# org-html-head: "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/stylesheet.css\" />"
+#+SETUPFILE: ~/Notes/setup.org
+#+LATEX_CLASS_OPTIONS: [letterpaper]
+#+LATEX_HEADER: \usepackage[utf8]{inputenc}
+#+LATEX_HEADER: \usepackage{import}
+#+LATEX_HEADER: \usepackage{xifthen}
+#+LATEX_HEADER: \usepackage{pdfpages}
+#+LATEX_HEADER: \usepackage{transparent}
+#+LATEX_HEADER: \usepackage{pdfpages}
+#+SETUPFILE: ~/Blog/assets/templates/main.org
+* Post about my day
+[[file:./testfile2.org]]
+It was a good day
+
+#+begin_src emacs-lisp
+    (require 'ox-publish)
+    (setq org-publish-project-alist
+          '(
+            ("Blog"
+             :base-directory "~/Space/Code/Blog/"
+             :base-extension "org"
+             :publishing-directory "~/Code/Blog/html/"
+             :recursive t
+             :publishing-function org-html-publish-to-html
+             :headline-levels 8             ; Just the default for this project.
+             :auto-preamble t
+             )
+
+            ("org-static"
+             :base-directory "~/Space/Code/Blog"
+             :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+             :publishing-directory "~/public_html/"
+             :recursive t
+             :publishing-function org-publish-attachment
+             )
+            ("org" :components ("org-notes" "org-static"))
+
+            )
+          )
+
+#+end_src
+
+#+DOWNLOADED: screenshot @ 2023-04-13 10:41:06
+[[file:../../../../Notes/assets/Post_about_my_day/2023-04-13_10-41-06_screenshot.png]]
+
+
+#+begin_quote
+If your a human, your a human
+#+end_quote
+* СОпряженное пространство
+Пусть $V, W$ - евклидовы пространства
+
+$f: V \to W$ - линейный оператор
+** Определение
+Оператор $f^*: W \to V$ называется сопряженным к $f$, если
+$\forall x \in V, y \in W$ выполнено равенство $\langle f(x), y \rangle = \langle x, f^*(y) \rangle$
+** Теорема о единственности $f^*$
+
+Если в $V$ и $W$ выбраны ортонормированные базисы и $f$ имеет в этих базисах метрику $A$ то $f^* = A^T$
+*** *Доказательство*
+$x = \sum\limits_{i} x_i e_i , \ y = \sum \limits_{i}y_kf_j$
+
+$\langle f(\sum x_ie_j, \sum y_j f_j \rangle = \langle \sum x_j e_i\rangle$
+
+
+#+begin_center
+Можно начать читать сразу с [[*Изоморфизм $V \cong V^{**}$ с нуля (попытка расписать понятно)][изоморфизма  $V$ и $V^{**}$]]
+#+end_center
+
+** Определение
+
+#+begin_quote
+Мне лень исправлять, но здесь под линейными функциями подразумеваются линейные функционалы. Т.е. такие функции $f: V \to K$, отображающие вектор из $V$  в поле $K$ (сопоставляющие вектору число, если по человечески)
+#+end_quote
+
+[[id:9b31d08d-dfe1-49df-bd29-822e521ef7a9][Пространство]] линейных функций $V^*$ изоморфное /(не заметно, но изоморфное)/ $V$, базисами которого являются [[id:a51d8ecf-8900-49fb-876b-482f7c60974d][линейные функции]] $(\varepsilon_0, \varepsilon_1, \cdots,  \varepsilon_n)$, такие что $\varepsilon_i(x) = x_i$, где $x_i$ - это коэффицент при $e_i$ в разложении $x \in V = x_0e_0 + x_1a_1 + \cdots + x_na_n$ по базисам $V$
+
+
+#+begin_quote
+То есть базисы пространства $V^*$ сопряженного по отношению к $V$ есть такие функции $\varepsilon_i(x)$, каждая из которых достает из данного вектора $x$ коэффициент, на который домножается базисный вектор $e_i \in V$ в разложении $x$ по базисам.   
+#+end_quote
+
+** Пример пространства функционалов над $V$
+Пусть $\alpha(x)$  - линейная функция $\alpha: V \to K$ в пространстве $V$ над полем $K$. То есть линейный функционал.
+
+\begin{align}
+\alpha(x) = a_1x_1+a_2x_2+a_3x_3+\cdots+a_nx_n
+\end{align}
+
+
+где $\alpha(e_i)  = a_i$ , то есть - $a_i$ коэффициент при базисном векторе $e_i$ - по сути единица??
+
+/Множество всех линейных функционалов в пространстве $V$ над полем $K$ тоже составляет пространство./
+
+**Доказательство:**
+Так как $\alpha(x)$ - линейная функция, то $\alpha(x) = x_1\alpha(e_1) + \cdots + x_n\alpha(e_n), x_i \in K$
+Тогда $(\alpha(e_1), \cdots, \alpha(e_n))$  - базис пространства всех линейных функционалов в пространстве $V$ над полем $K$. Будем его называть сопряженным к $V$ пространством $V^*$
+
+** Изоморфизм $V \cong V^{**}$ с нуля (попытка расписать понятно)
+
+Есть линейное пространство  $V$ над $K$
+Множество всех линейных функционалов над этим пространством $V$ в поле $K$, тоже образует пространство. Так как это функционал, назовем его $\alpha$ из определения следует что $a(x) = x_1\alpha(e_1) + ... + x_n\alpha(e_n)$
+То есть это линейная комбинация функционалов $\alpha(e_1)...\alpha(e_n)$. И тогда эти функционалы являются базисом. Значит, этими базисными функционалами определяется все пространство функционалов из  $V$  в $K$.
+
+Возьмем такой базис $(\varepsilon_1, ... , \varepsilon_n)$, что $\varepsilon_i(x) = x_{i}$. То есть что $i$-ый функционал от $x$ возвращает $i$ координату $x \in V$.
+А почему мы взяли именно такой базис? А почему бы и нет? Что бы потом назвать его сопряженным к базису $V$, да и все равно все линейные функционалы определеяются через базисные, а про них ничего не сказанно (могу тут ошибаться), поэтому почему не придумать бы такие.
+
+Итак. Мы определили базис пространства всех линейных функционалов из $V$  в $K$, такое пространство мы будем называть сопряженным к $V$ или двойственным к $V$ и обозночать $V^*$
+
+Из определения видно что $x = \sum\limits_{i=0}^n \varepsilon_i(x)e_i$ то есть вектор из $V$ можно представить как линейную комбинацию базисов с коэффцииентами $\varepsilon_i(x)$ - т.е. обычные коэффициенты.
+Теперь рассмотрим линейные функционалы из $V^*$ в $K$. Т.е. такие функционалы $f$ над пространством функционалов $V^*$.
+
+$f: V^* \to K$
+
+$f: (V \to K) \to K$
+
+Так как функционалы линейные, мы можем прийти к такому виду: $f(v) = a_1f(\varepsilon_1) + ... + a_nf(\varepsilon_n), v: V \to K$. То есть также видим, что $\langle f(\varepsilon_{1}), ... ,f(\varepsilon_{n})\rangle$  будет образовывать пространство всех линейных функционалов из $V^*$ в $K$.
+Такое пространство мы будет отмечать как $V^{**}$ /(doble Dual space, пространство, двойственное двойственному, сопряженное к сопряженному к $V$)/
+
+Раз уж это пространство *всех* линейный функионалов, то мы можем найти в нем такую функцию $f_x(\alpha) = \alpha(x), \alpha: V \rightarrow K, \alpha \in V^{*}$, то есть функционал из $V^{**}$ принимает функционал из $V^*$ и возвращает значение $\alpha \in V^*$ от вектора $x \in V$. А вспоминая, что  $x = \sum\limits_{i=0}^n \varepsilon_i(x)e_i$ мы можем представить это в виде $x = \sum\limits_{i=0}^n f_x(\varepsilon_i)e_i$, откуда можно установить биекцию $x \mapsto f_x$
+
+
+Винберг приходит к биекции по другому. Исходя из того, что $f_x(\alpha) = \alpha(x)$, можем взять $f_{e_i}(\varepsilon_j) = \varepsilon_j(e_i) = \delta_{ij}$, что равно [[id:089d11aa-4769-4974-befa-b5e5cd7d2d41][символу кронекера]] ($\delta_{ij} = 1, i=j$) чего достаточно для того, что бы утвержать что $(f_{e_1}, ... ,f_{e_n})$ являются базисом $V^{**}$, а отображение $x \mapsto f_x$ по сути переводит линейную комбинацию векторов из базиса $V$ в линейную комбинацию векторов из базиса $V^{**}$ с такими же координатами.
+
+/(Почему с такими же? )/
+\begin{align*}
+x = \sum\limits_{i=0}^n f_x(\varepsilon_i)e_i \Rightarrow x = \sum\limits_{i=0}^n f_{a_1e_1+...+a_ne_{n}}(\varepsilon_i)e_i \\
+(a_{1}f_{e_1}+...+a_nf_{e_{n}})(\varepsilon_i)e_i = \\ (a_1f_{e_1}(\varepsilon_{i}) + ... + a_nf_{e_n}(\varepsilon_{i}))e_{i}=a_{i}f_{e_{i}}(\varepsilon_{i})e_{i} = a_{i}e_{i} \\
+\Rightarrow x = \sum\limits_{i=0}^n f_x(\varepsilon_i)e_i = \sum\limits_{i=0}^n a_{i}e_i \\
+\end{align*}
+
+
+
+
+

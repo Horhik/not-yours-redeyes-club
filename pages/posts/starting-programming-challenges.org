@@ -1,0 +1,36 @@
+#+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+options: author:t broken-links:nil c:nil creator:nil
+#+options: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:t
+#+options: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+options: timestamp:t title:t toc:t todo:t |:t
+#+title: Starting programming challenges [[file:./startig-programming-challenges.ru.org][ru]]-[[file:./starting-programming-challenges.org][en]]
+#+date: <2023-04-23 Sun>
+#+author: Horhik
+#+email: horhik@disroot.org
+#+language: en
+#+select_tags: export
+#+exclude_tags: noexport
+#+creator: Emacs 28.2 (Org mode 9.6)
+#+cite_export:
+
+[[file:./startig-programming-challenges.ru.org][ru]]-[[file:./starting-programming-challenges.org][en]]
+
+I saw [[https://github.com/Horhik/ProgrammingChallenges-v4.0/blob/main/PCv4.png?raw=true][this]] image about a +year ago+... OMG, it was 2020! So, about a 3 years ago :)
+
+Since that I had that idea in my mind, but only now I feel myself ready to that, or maybe I just want to code and get some new skills, expand my horizons 🧐
+
+
+#+DOWNLOADED: https://github.com/Horhik/ProgrammingChallenges-v4.0/blob/main/PCv4.png?raw=true @ 2023-04-23 21:00:32
+[[file:./2023-04-23_21-00-32_PCv4.png.png]]
+
+So, I decided to start this jorney and for that I'll post poll on the [[https://mastodon.ml/@horhik][fediverse]] for each new challenge, where you, my reader, will be able to select which way I'll suffer next time.
+
+Poll will contain challenge and language to code on /(e.g. =haskell=, =lisp=, =C=, =Rust=, =NASM=, *maybe smth else*)/
+**  Why am I doing that 🥲
+I lost myself a bit... So, I want to code, I want to explore new things, I want to find a sphere 🌐 I interested in... My knowledges for now are so abstract /(except fronted-development, but I don't want it)/, and doing this challenges, I guess, will make me more aware about different sides of this *N*-dimentional shape of applied programming 
+** Tracking the progres
+Content below contain links to already codded challenges and an image with my notes
+
+[[file:./challenge.png]]
+* Challenges
+** [[file:./mandelbrot-set-challenge-1.org][ Mandelbrot set]]

@@ -1,0 +1,37 @@
+#+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+options: author:t broken-links:nil c:nil creator:nil
+#+options: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:t
+#+options: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+options: timestamp:t title:t toc:t todo:t |:t
+#+title: Challenge 1. Mandelbrot set
+#+date: <2023-04-23 Sun>
+#+author: Horhik
+#+email: horhik@disroot.org
+#+language: en
+#+select_tags: export
+#+exclude_tags: noexport
+#+creator: Emacs 28.2 (Org mode 9.6)
+#+cite_export:
+* Gallery
+[[file:./mandelbrot-set-challenge/2023-03-28_11-29.png]]
+[[file:./mandelbrot-set-challenge/2023-03-29_09-33.png]]
+[[file:./mandelbrot-set-challenge/2023-03-29_13-06.png]]
+[[file:./mandelbrot-set-challenge/2023-03-29_13-58.png]]
+[[file:./mandelbrot-set-challenge/2023-03-29_14-30_1.png]]
+[[file:./mandelbrot-set-challenge/2023-03-29_14-30_2.png]]
+[[file:./mandelbrot-set-challenge/2023-03-29_14-30.png]]
+[[file:./mandelbrot-set-challenge/2023-03-29_14-31.png]]
+[[file:./mandelbrot-set-challenge/2023-04-05_13-18.png]]
+[[file:./mandelbrot-set-challenge/2023-04-05_15-10.png]]
+[[file:./mandelbrot-set-challenge/2023-04-05_17-57.png]]
+[[file:./mandelbrot-set-challenge/2023-04-05_18-09.png]]
+[[file:./mandelbrot-set-challenge/2023-04-10_20-33.png]]
+[[file:./mandelbrot-set-challenge/2023-04-10_20-34.png]]
+[[file:./mandelbrot-set-challenge/2023-04-19_10-18_1.png]]
+[[file:./mandelbrot-set-challenge/2023-04-19_10-18.png]]
+[[file:./mandelbrot-set-challenge/2023-04-19_10-19_1.png]]
+[[file:./mandelbrot-set-challenge/2023-04-19_10-19_2.png]]
+[[file:./mandelbrot-set-challenge/2023-04-19_10-19.png]]
+[[file:./mandelbrot-set-challenge/2023-04-19_10-20_1.png]]
+[[file:./mandelbrot-set-challenge/2023-04-19_10-20.png]]
+[[file:./mandelbrot-set-challenge/not-mandelbrot.png]]
